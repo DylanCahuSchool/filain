@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation du Livre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .bg-opacity-overlay {
+            position: relative;
+        }
+
+        .bg-opacity-overlay::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('images/map.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.55;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen font-serif bg-opacity-overlay">
+    <!-- Header -->
+    <header class="bg-white/95 shadow-md backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <nav class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="images/blackTriskell.png" alt="Logo Filaïn" class="h-8 w-auto">
+                    <h1 class="text-xl font-bold text-black font-display">Filaïn</h1>
+                </div>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#presentation"
+                            class="text-gray-700 hover:text-black transition-colors">Présentation</a></li>
+                    <li><a href="#personnages" class="text-gray-700 hover:text-black transition-colors">Personnages</a>
+                    </li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-black transition-colors">Contact</a>
+                    </li>
+                </ul>
+                <button class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="max-w-3xl mx-auto py-12 px-4 bg-white/90 md:bg-white/80 shadow-xl rounded-xl mt-8">
+        <!-- Présentation générale -->
+        <div id="presentation" class="flex flex-col items-center mb-10">
+            <h1 class="text-4xl font-extrabold mb-2 font-display text-black">Aux cotés de Filaïn et Sira, entrez
+                dans la légende.</h1>
+            <img src="images/FilaïnNamed.png" alt="Couverture du livre"
+                class="w-96 h-120 object-cover rounded-lg shadow-md mb-6">
+            <p class="text-gray-600 mb-6 text-center text-justify text-lg">
+                Filaïn est un garçon de ferme qui a la particularité d'être un mage aux pouvoirs limités. Il entend bien
+                vivre une vie tranquille avec sa sœur Sira et utiliser ses pouvoirs afin de faire prospérer son village.
+                Il se retrouvera pourtant embarqué dans l'une des légendes qui a bercé son enfance, le Triskell. Un clan
+                légendaire qui, dit on, est invincible.
+            </p>
+            <a href="#personnages"
+                class="bg-green-800 text-white px-6 py-3 rounded-lg shadow hover:bg-green-900 transition-colors mb-6">Lire
+                un extrait</a>
+        </div>
+
+        <!-- separateur -->
+        <div id="separateur" class="flex flex-col items-center mt-12 mb-10">
+            <hr class="border-gray-500 mb-10 w-32">
+        </div>
+
+        <!-- Extraits et personnages -->
+        <h3 id="personnages" class="text-2xl font-bold text-black mb-6 font-display text-center">Des personnages aux
+            histoires développée.</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Personnage 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-between h-full">
+                <div class="flex flex-col items-center text-center">
+                    <img src="images/karlaz.png" alt="Personnage 1"
+                        class="w-32 h-32 object-cover rounded-full border-4 border-blue-300 mb-4 shadow">
+                    <h4 class="text-xl font-semibold text-blue-800 mb-2 font-display">Karlaz</h4>
+                    <p class="text-gray-600 text-center mb-4">
+                        Karlaz est un prince déchu de l'Ordre du feu. Il fut banni de sa famille et de son Ordre car sa
+                        force menaçait la couronne. Avec Mars, il fonda le clan du Triskell tel qu'on le connaît. Il n'a
+                        volonté que de protéger le pays tout en donnant un sens à sa vie désormais éternelle.
+                    </p>
+                </div>
+                <a href="#personnages"
+                    class="bg-green-800 text-white px-6 py-3 rounded-lg shadow hover:bg-green-900 transition-colors">Lire
+                    un extrait (bientôt)</a>
+            </div>
+            <!-- Personnage 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-between h-full">
+                <div class="flex flex-col items-center text-center">
+                    <img src="images/julia3.png" alt="Personnage 2"
+                        class="w-32 h-32 object-cover rounded-full border-4 border-pink-300 mb-4 shadow">
+                    <h4 class="text-xl font-semibold text-pink-800 mb-2 font-display">Julia</h4>
+                    <p class="text-gray-600 text-center mb-4">
+                        Julia, surnommée la reine des prêtresses, est la dernière survivante d'un peuple vivant dans les
+                        cieux. Ce peuple a été massacré car il représentait un trop grand danger pour les sombres
+                        desseins d'un Ordre humain. Dans son malheur, elle fut sauvée et recueillie par le Triskell
+                        lorsqu'elle était enfant. Elle compte bien restaurer la réputation de son peuple et en venger le
+                        massacre.
+                    </p>
+                </div>
+                <a href="#personnages"
+                    class="bg-green-800 text-white px-6 py-3 rounded-lg shadow hover:bg-green-900 transition-colors">Lire
+                    un extrait</a>
+            </div>
+        </div>
+
+        <!-- separateur -->
+        <div id="separateur" class="flex flex-col items-center mt-12 mb-10">
+            <hr class="border-gray-500 mb-10 w-32">
+        </div>
+
+        <!-- Présentation de l'auteur -->
+        <div id="auteur" class="mt-12">
+            <h3 class="text-2xl font-bold text-black mb-4 font-display text-center">À propos de moi</h3>
+            <img src="images/moi.png" alt="Auteur Mars Cahu"
+                class="w-32 h-32 object-cover rounded-full border-4 border-green-500 mb-4 shadow mx-auto">
+            <p class="text-gray-600 mb-3  text-justify">
+                Je m'appelle Mars. Je suis musicien à mes heures perdues et travail dans l'informatique depuis 6 ans.
+                J'ai, depuis déjà plus de 7 ans, l'histoire du Triskell en tête. J'ai récemment commencé à avoir des
+                images de Filaïn et de Sira afin de vous découvrir cette histoire. Puissiez-vous, vous aussi, avoir ces
+                images lorsque vous lirez mon livre.</p> 
+
+                <p class="text-gray-600">Amicalement,</p>
+                <p class="text-gray-600 mb-6">Mars.</p>
+            </p>
+            <p class="text-gray-600 text-center">
+                Suivez moi sur <a href="https://www.instagram.com/mars_cahu/"
+                    class="text-blue-600 hover:underline">Instagram</a> pour suivre l'avancé du livre.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white mt-12">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Informations de contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 font-display">Contact</h4>
+                    <p class="text-gray-300 mb-2">📧 contact@filain-livre.fr</p>
+                    <!-- <p class="text-gray-300 mb-2">📱 +33 1 23 45 67 89</p> -->
+                    <p class="text-gray-300">📍 Caen, France</p>
+                </div>
+
+                <!-- Liens utiles -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 font-display">Liens</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#presentation"
+                                class="text-gray-300 hover:text-white transition-colors">Présentation</a></li>
+                        <li><a href="#personnages"
+                                class="text-gray-300 hover:text-white transition-colors">Personnages</a></li>
+                        <li><a href="#auteur"
+                                class="text-gray-300 hover:text-white transition-colors">À propos de l'auteur</a></li>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Réseaux sociaux -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 font-display">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/mars_cahu/"
+                            class="text-gray-300 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 Filaïn. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
